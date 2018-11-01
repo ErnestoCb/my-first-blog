@@ -1,0 +1,23 @@
+
+/* NAVBAR CSS */
+.navbar-custom{
+    background-color: #76D7C4;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: white;
+}
+
+.caquita {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    background-color: red;
+    width: 50%;
+}
+
+body {
+    color: red;
+}
+/* NAVBAR CSS */
+
