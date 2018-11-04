@@ -5,26 +5,42 @@
 }
 
 .logo {
-    width: 40%;
+    width: 100%;
+    height:auto;
 }
 
-.caquita {
+.opciones:hover{
+    color: gray;
+    text-decoration: none;
+}
+
+.opciones{
     display: block;
-    margin: 0 auto;
-    text-align: center;
-    background-color: red;
+    padding: .5rem 1rem;
+    color: white;
+    
+}
+.listaU{
+    text-align:center;
 }
 
-body {
-    color: red;
+.barrita{
+    display: inline-block;
+    color: white;
+    padding: .5rem 1rem;
 }
 
-@media only screen and (max-width: 800px) {
-    .logo {
-        width: auto;
+.desaparece{
+
+}
+
+
+@media only screen and (max-width: 700px) {
+    .listaU{
+        width: 100%;
     }
-    body {
-        color: red;
+    .desaparece{
+        display: none;
     }
 }
 /* NAVBAR CSS */
