@@ -90,55 +90,64 @@
     <!--Seccion Informacion-->
 
     <!-- GALERIA -->
-    <div class="row navbar-custom gallery" style="margin-top: 30px">
+    <div class="row navbar-custom gallery" style="margin-top: 30px; margin-left: 0px">
         <div class="wrap">
             <a href="#" data-toggle="modal" data-target="#modal1" class="modalUp">
-                <img src="{% static 'img/rescatados/Oso_tn.jpg' %}" alt="Oso">
+                <img src="{% static 'img/rescatados/Oso.jpg' %}" alt="Oso">
             </a>
             <a href="#" data-toggle="modal" data-target="#modal1" class="modalUp">
-                <img src="{% static 'img/rescatados/Maya_tn.jpg' %}" alt="Maya">
+                <img src="{% static 'img/rescatados/Maya.jpg' %}" alt="Maya">
             </a>
             <a href="#" data-toggle="modal" data-target="#modal1" class="modalUp">
-                <img src="{% static 'img/rescatados/Wifi_tn.jpg' %}" alt="Wifi">
+                <img src="{% static 'img/rescatados/Wifi.jpg' %}" alt="Wifi">
             </a>
         </div>
         <div class="wrap" id="columnita">
             <a href="#" data-toggle="modal" data-target="#modal1" class="modalUp">
-                <img src="{% static 'img/rescatados/Chocolate_tn.jpg' %}" alt="Oso">
+                <img src="{% static 'img/rescatados/Chocolate.jpg' %}" alt="Oso">
             </a>
             <a href="#" data-toggle="modal" data-target="#modal1" class="modalUp">
-                <img src="{% static 'img/rescatados/Pexel_tn.jpg' %}" alt="Maya">
+                <img src="{% static 'img/rescatados/Pexel.jpg' %}" alt="Maya">
             </a>
         </div>
         <div class="wrap">
             <a href="#" data-toggle="modal" data-target="#modal1" class="modalUp">
-                <img src="{% static 'img/rescatados/Bigotes_tn.jpg' %}" alt="Oso">
+                <img src="{% static 'img/rescatados/Bigotes.jpg' %}" alt="Oso">
             </a>
             <a href="#" data-toggle="modal" data-target="#modal1" class="modalUp">
-                <img src="{% static 'img/rescatados/Luna_tn.jpg' %}" alt="Maya">
+                <img src="{% static 'img/rescatados/Luna.jpg' %}" alt="Maya">
             </a>
         </div>
     </div>
     <!-- GALERIA -->
 
     <!--popup-->
-    <div class="modal" id="modal1">
-        <div class="modal-dialog">
+    
+
+    <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button class="close" type="button" data-dismiss="modal">x</button>
-                    <h1 class="modal-title" id="perriteName"></h1>
+                    <h3 class="modal-title" id="perriteName"></h3>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
                 <div class="modal-body">
-                    <h3 id="breveResena"></h3>
-                    <div id="perrite"></div>
+                    <h4 id="breveResena"></h4>
+                    <div id="perrite">
                 </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+
             </div>
         </div>
     </div>
-    <!--popup-->
+    <!-- popup-->
     
     <!--formulario popup -->
+    
 
     <!-- formulario popup -->
     
