@@ -147,7 +147,110 @@
     <!-- popup-->
     
     <!--formulario popup -->
-    
+    <div class="modal fade" id="modalFormulario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Rellenar Formulario.</h3>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    
+                    <form>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="col">
+                                    <label>"Ingrese Correo electronico:</label>
+                                </div>
+                                <div class="col">
+                                    <input type="email" placeholder="Ingrese correo valido" required>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="col-12">
+                                <div class="col">
+                                    <label>Ingrese Run: </label>
+                                </div>
+                                <div class="col">
+                                    <input type="text" minlength="3" maxlength="10" placeholder="*Run sin puntos ni guion" required>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="col-12">
+                                <div class="col">
+                                    <label>Ingrese nombre: </label>
+                                </div>
+                                <div class="col">
+                                    <input type="text" required>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="col-12">
+                                <div class="col">
+                                    <label>Ingrese Fecha de nacimiento: </label>
+                                </div>
+                                <div class="col">
+                                    <input type="date" min="1910-01-01" max="2000-12-31" required>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="col-12">
+                                <div class="col">
+                                    <label>Teléfono de contacto: </label>
+                                </div>
+                                <div class="col">
+                                    <input type="number" min="100000000" max="999999999" placeholder="9-9999 9999" required>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="col-12">
+                                <div class="col">
+                                    <label>Ingrese región: </label>
+                                </div>
+                                <div class="col">
+                                    <select name="selectRegion" id="regiones" required></select>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="col-12">
+                                <div class="col">
+                                    <label>Ingrese comuna: </label>
+                                </div>
+                                <div class="col">
+                                    <select name="selectComuna" id="comunas" required></select>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="col-12">
+                                <div class="col">
+                                    <label>Ingrese tipo de vivienda:</label>
+                                </div>
+                                <div class="col">
+                                    <select required>
+                                        <option selected> Seleccione vivienda </option>
+                                        <option>Casa con patio grande</option>
+                                        <option>Casa con patio pequeño</option>
+                                        <option>Casa sin patio</option>
+                                        <option>Departamento</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            <img class="logo" src="{% static 'img/fondo3.jpg' %}" alt="perroFeo" style="padding: 1em"/>
+                            <br>
+                            <br>
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                            <input class="btn btn-primary" type="submit" value="Enviar Formulario de Contacto">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- formulario popup -->
     
@@ -166,5 +269,5 @@
     <!--footer-->
     
     <script src="{% static 'js/misPerrisJs.js' %}"></script>
-
+    <script src="{% static 'js/regionComuna.js' %}"></script>
 {% endblock %}
