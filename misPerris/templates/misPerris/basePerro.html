@@ -33,6 +33,19 @@
                 <li class="nav-item">
                     <a class="opciones" href="#" data-toggle="modal" data-target="#modalFormulario">Contactanos</a>
                 </li>
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a href="{% url 'logout' %}" class="opciones fas fa-user-ninja" style="padding-top: 11px">{{ user.username }} - Logout</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'password_reset' %}" class="opciones">Cambiar contraseña</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="opciones fas fa-user-ninja" href="{% url 'login' %}" style="padding-top: 11px">Iniciar sesion</a>
+                </li>
+                {% endif %}
+
             </ul>
         </div> 
     </nav>
