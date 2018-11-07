@@ -158,14 +158,35 @@
                 </div>
                 <div class="modal-body">
                     
-                    <form>
+                    <form method="POST">
+                        {% csrf_token %}
+
                         <div class="row">
                             <div class="col-12">
                                 <div class="col">
-                                    <label>"Ingrese Correo electronico:</label>
+                                    <label>Ingrese nombre de usuario:</label>
                                 </div>
                                 <div class="col">
-                                    <input type="email" placeholder="Ingrese correo valido" required>
+                                    <input type="text" name="userNick" minlength="1" placeholder="nickname" required>
+                                </div>
+                            </div>
+                            <br>
+                    
+                            <div class="col-12">
+                                <div class="col">
+                                    <label>Ingrese contraseña:</label>
+                                </div>
+                                <div class="col">
+                                    <input type="password" name="password" minlength="8" placeholder="minimo 8 caracteres"  required>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="col-12">
+                                <div class="col">
+                                    <label>Ingrese Correo electronico:</label>
+                                </div>
+                                <div class="col">
+                                    <input type="email" name="userEmail" placeholder="Ingrese correo valido" required>
                                 </div>
                             </div>
                             <br>
@@ -174,7 +195,7 @@
                                     <label>Ingrese Run: </label>
                                 </div>
                                 <div class="col">
-                                    <input type="text" minlength="3" maxlength="10" placeholder="*Run sin puntos ni guion" required>
+                                    <input type="text" name="userRun" minlength="3" maxlength="10" placeholder="*Run sin puntos ni guion" required>
                                 </div>
                             </div>
                             <br>
@@ -183,7 +204,7 @@
                                     <label>Ingrese nombre: </label>
                                 </div>
                                 <div class="col">
-                                    <input type="text" required>
+                                    <input type="text" name="userName" required>
                                 </div>
                             </div>
                             <br>
@@ -192,7 +213,7 @@
                                     <label>Ingrese Fecha de nacimiento: </label>
                                 </div>
                                 <div class="col">
-                                    <input type="date" min="1910-01-01" max="2000-12-31" required>
+                                    <input type="date" name="fecNac" min="1910-01-01" max="2000-12-31" required>
                                 </div>
                             </div>
                             <br>
@@ -201,7 +222,7 @@
                                     <label>Teléfono de contacto: </label>
                                 </div>
                                 <div class="col">
-                                    <input type="number" min="100000000" max="999999999" placeholder="9-9999 9999" required>
+                                    <input type="number" name="userFono" min="100000000" max="999999999" placeholder="9-9999 9999" required>
                                 </div>
                             </div>
                             <br>
@@ -210,7 +231,7 @@
                                     <label>Ingrese región: </label>
                                 </div>
                                 <div class="col">
-                                    <select name="selectRegion" id="regiones" required></select>
+                                    <select name="userRegion" id="regiones" required></select>
                                 </div>
                             </div>
                             <br>
@@ -219,7 +240,7 @@
                                     <label>Ingrese comuna: </label>
                                 </div>
                                 <div class="col">
-                                    <select name="selectComuna" id="comunas" required></select>
+                                    <select name="userComuna" id="comunas" required></select>
                                 </div>
                             </div>
                             <br>
@@ -228,7 +249,7 @@
                                     <label>Ingrese tipo de vivienda:</label>
                                 </div>
                                 <div class="col">
-                                    <select required>
+                                    <select name="userTipo" required>
                                         <option selected> Seleccione vivienda </option>
                                         <option>Casa con patio grande</option>
                                         <option>Casa con patio pequeño</option>
@@ -242,7 +263,7 @@
                             <br>
                             <br>
                             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                            <input class="btn btn-primary" type="submit" value="Enviar Formulario de Contacto">
+                            <button class="btn btn-primary" type="submit">Registrar</button>
                         </div>
                     </form>
                 </div>
@@ -254,19 +275,6 @@
 
     <!-- formulario popup -->
     
-
-    <!--footer-->
-    <footer class="row">
-    <p style="padding-left: 3em">Desarrollo Web y Mobile</p>
-    <p>
-    <a href="http://jigsaw.w3.org/css-validator/check/referer">
-        <img style="border:0;width:88px;height:31px; text-align: right; "
-            src="http://jigsaw.w3.org/css-validator/images/vcss"
-            alt="¡CSS Válido!" />
-    </a>
-    </p>
-    </footer>
-    <!--footer-->
     
     <script src="{% static 'js/misPerrisJs.js' %}"></script>
     <script src="{% static 'js/regionComuna.js' %}"></script>

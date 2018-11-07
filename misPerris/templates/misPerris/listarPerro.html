@@ -1,0 +1,8 @@
+{% extends 'misPerris/basePerro.html' %}
+{% load static %}
+{% block content %}
+<div>
+    <h1><a href="{% url 'perro_detail' id_perro=perro.id_perro %}">{{ perro.nombre_perro }}</a></h1>
+</div>
+
+{% endblock %}

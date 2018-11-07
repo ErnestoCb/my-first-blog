@@ -28,10 +28,10 @@
                     <a class="opciones" href="#">Quienes Somos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="opciones" href="#">Servicios</a>
+                    <a class="opciones" href="{% url 'perro_list' %}">Servicios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="opciones" href="#" data-toggle="modal" data-target="#modalFormulario">Contactanos</a>
+                    <a class="opciones" href="#" data-toggle="modal" data-target="#modalFormulario">Registrar</a>
                 </li>
                 {% if user.is_authenticated %}
                 <li class="nav-item">
@@ -59,6 +59,19 @@
             </div>
         </div>
     </div>
+
+    <!--footer-->
+    <footer class="row">
+        <p style="padding-left: 3em">Desarrollo Web y Mobile</p>
+        <p>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px; text-align: right; "
+                src="http://jigsaw.w3.org/css-validator/images/vcss"
+                alt="¡CSS Válido!" />
+        </a>
+        </p>
+    </footer>
+    <!--footer-->
 
     <!-- Jquey y bootstrap -->
     
