@@ -37,9 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog.apps.BlogConfig',
     'misPerris.apps.MisperrisConfig',
-    'accounts.apps.AccountsConfig'
     'custom_auth.apps.CustomAuthConfig',
 ]
 
@@ -104,7 +102,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 #Custom Authentication
-AUTH_USER_MODEL = 'custom_auth.User'
+AUTH_USER_MODEL = 'custom_auth.CustomUser'
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
@@ -126,7 +124,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'blog\static'),
     os.path.join(BASE_DIR, 'misPerris\static'),
     ]
 LOGIN_REDIRECT_URL = 'home'

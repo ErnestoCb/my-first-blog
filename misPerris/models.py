@@ -13,18 +13,3 @@ class perro(models.Model):
 
     def __str__(self):
         return self.nombre_perro
-
-class usuario(models.Model):
-    userNick = models.CharField(max_length=30)
-    password = models.CharField(max_length=30)
-    userEmail = models.EmailField()
-    userRun = models.CharField(max_length=30)
-    userName = models.CharField(max_length=30)
-    fecNac = models.DateTimeField()
-    userFono = models.IntegerField(max_length=15)
-    userRegion = models.CharField(max_length=30)
-    userComuna = models.CharField(max_length=30)
-    userTipo = models.CharField(max_length=30)
-
-    def __str__(self):
-        return self.userNick
