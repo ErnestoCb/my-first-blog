@@ -35,7 +35,7 @@
                     <a href="{% url 'logout' %}" class="opciones fas fa-user-ninja" style="padding-top: 11px">{{ user.username }} - Logout</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{% url 'password_reset' %}" class="opciones">Cambiar contraseña</a>
+                    <a href="{% url 'password_reset' %}" class="opciones">{{ user.run }} - Cambiar contraseña</a>
                 </li>
                 {% else %}
                 <li class="nav-item">
